@@ -1,5 +1,5 @@
 import faker from 'faker';
-import { createContext, useReducer } from 'react';
+import { createContext, useContext, useReducer } from 'react';
 import { cartReducer } from './Reducers';
 
 const Cart = createContext();
@@ -24,3 +24,7 @@ const Context = ({ children }) => {
 };
 
 export default Context;
+
+export const CartState = () => {
+  return useContext(Cart);
+};
