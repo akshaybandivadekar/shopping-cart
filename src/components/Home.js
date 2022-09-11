@@ -1,4 +1,5 @@
 import { CartState } from '../context/Context';
+import Filters from './Filters';
 import SingleProduct from './SingleProduct';
 import './styles.css';
 
@@ -9,6 +10,7 @@ function Home() {
   console.log(products);
   return (
     <div className='home'>
+      <Filters />
       <div className='productContainer'>
         {products.map((product) => {
           return <SingleProduct product={product} key={product.id} />;
