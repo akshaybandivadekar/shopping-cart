@@ -4,10 +4,10 @@ import Rating from './Rating';
 
 const Filters = () => {
   const {
-    productState: { byStock, byFastDelivery, sort, byRating },
+    productState: { byStock, byFastDelivery, sort, byRating, searchQuery },
     productDispatch,
   } = CartState();
-  console.log(byStock, byFastDelivery, sort, byRating);
+  console.log(byStock, byFastDelivery, sort, byRating, searchQuery);
   return (
     <div className='filters'>
       <span className='title'>Filter Products</span>
